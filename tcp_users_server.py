@@ -3,6 +3,7 @@ import socket
 
 messages = []
 
+
 def server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(('localhost', 12345))
@@ -22,6 +23,7 @@ def server():
             client_socket.send('\n'.join(messages).encode())
 
         client_socket.close()
+
 
 if __name__ == '__main__':
     server()
