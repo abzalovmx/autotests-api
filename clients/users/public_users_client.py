@@ -26,4 +26,4 @@ class PublicUsersClient(APIClient):
         :param request: Данные нового пользователя в формате CreateUserRequest.
         :return: Ответ от сервера в виде объекта httpx.Response.
         """
-        return self.client.post("/api/v1/users", json=request)
+        return self.post("/api/v1/users", json=request)
