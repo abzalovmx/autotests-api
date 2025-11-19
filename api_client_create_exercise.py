@@ -1,8 +1,8 @@
-from clients.courses.courses_client import get_courses_client, CreateCourseRequestDict
+from clients.courses.courses_client import get_courses_client, CreateCourseRequestSchema
 from clients.files.files_client import get_files_client
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.privet_http_builder import AuthenticationUserSchema
-from clients.exercises.exercises_client import get_exercises_client, CreateExercisesRequestDict
+from clients.exercises.exercises_client import get_exercises_client, CreateExercisesRequestSchema
 from clients.users.public_users_client import get_public_users_client
 from tools.fakers import get_random_email
 from clients.users.users_schema import CreateUserRequestSchema
@@ -38,28 +38,28 @@ create_file_request = CreateFileRequestSchema(
 create_file_response = files_client.create_file(create_file_request)
 print('Create file data:', create_file_response)
 
-create_course_request = CreateCourseRequestDict(
+create_course_request = CreateCourseRequestSchema(
     title='Python',
-    maxScore=100,
-    minScore=10,
+    max_score=100,
+    min_score=10,
     description='Python api course',
-    estimatedTime='2 weeks',
-    previewFileId=create_file_response.file.id,
-    createdByUserId=create_user_response.user.id
+    estimated_time='2 weeks',
+    preview_file_id=create_file_response.file.id,
+    created_by_user_id=create_user_response.user.id
 )
 create_course_response = courses_client.create_course(create_course_request)
 print('Create course data:', create_course_response)
 
 exercises_client = get_exercises_client(authentication_user)
 
-create_exercises_request = CreateExercisesRequestDict(
+create_exercises_request = CreateExercisesRequestSchema(
     title="title",
-    courseId=create_course_response["course"]["id"],
-    maxScore=5,
-    minScore=1,
-    orderIndex=1,
+    course_id=create_course_response.course.id,
+    max_score=5,
+    min_score=1,
+    order_index=1,
     description="description",
-    estimatedTime="2 weeks"
+    estimated_time="2 weeks"
 )
 create_exercises_response = exercises_client.create_exercise(create_exercises_request)
 print('Create exercise data:', create_exercises_response)
