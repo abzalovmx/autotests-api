@@ -100,7 +100,7 @@ class CreateExerciseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias="estimatedTime", default_factory=fake.estimated_time)
 
 
-class CreateExerciseResponsetSchema(BaseModel):
+class CreateExerciseResponseSchema(BaseModel):
     """
     Описание структуры ответа создания задания.
     """
