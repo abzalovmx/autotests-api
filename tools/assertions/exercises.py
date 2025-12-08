@@ -1,6 +1,6 @@
 from clients.exercises.exercises_schema import (
     CreateExerciseRequestSchema,
-    CreateExerciseResponsetSchema,
+    CreateExerciseResponseSchema,
     ExerciseSchema,
     GetExerciseResponseSchema
 )
@@ -9,7 +9,7 @@ from tools.assertions.base import assert_equal
 
 def assert_create_exercise_response(
     request: CreateExerciseRequestSchema,
-    response: CreateExerciseResponsetSchema,
+    response: CreateExerciseResponseSchema,
 ):
     """
     Проверяет, что ответ на создание задания соответствует данным из запроса.
@@ -46,7 +46,7 @@ def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
 
 def assert_get_exercise_response(
     get_exercise_response: GetExerciseResponseSchema,
-    create_exercise_response: CreateExerciseResponsetSchema,
+    create_exercise_response: CreateExerciseResponseSchema,
 ):
     """
     Проверяет, что ответ на получение задания соответствует ответe на его создание.
