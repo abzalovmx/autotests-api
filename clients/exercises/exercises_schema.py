@@ -106,3 +106,11 @@ class CreateExerciseResponsetSchema(BaseModel):
     """
 
     exercise: ExerciseSchema
+
+
+class GetExerciseResponseSchema(BaseModel):
+    """
+    Описание структуры ответа на получение задания.
+    """
+
+    exercise: ExerciseSchema
