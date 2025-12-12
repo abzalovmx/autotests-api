@@ -27,11 +27,14 @@ from allure_commons.types import Severity
 @pytest.mark.regression
 @allure.tag(AllureTag.GET_ENTITIES)
 @allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
 @allure.feature(AllureFeature.COURSES)
+@allure.suite(AllureFeature.COURSES)
 class TestCourses:
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.title("Create courses")
     @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
     def test_create_course(
             self,
@@ -52,6 +55,7 @@ class TestCourses:
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.title("Get courses")
     @allure.story(AllureStory.GET_ENTITY)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
     @allure.severity(Severity.BLOCKER)
     def test_get_courses(
             self,
@@ -71,6 +75,7 @@ class TestCourses:
     @allure.tag(AllureTag.UPDATE_ENTITY)
     @allure.title("Update courses")
     @allure.story(AllureStory.UPDATE_ENTITY)
+    @allure.sub_suite(AllureStory.UPDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
     def test_update_course(self, course_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
