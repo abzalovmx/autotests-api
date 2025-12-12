@@ -7,7 +7,6 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     GetExercisesResponseSchema
 )
-from tools.assertions.base import assert_equal
 from clients.errors_schema import InternalErrorResponseSchema
 from tools.assertions.errors import assert_internal_error_response
 from tools.assertions.base import assert_equal, assert_length
@@ -92,6 +91,7 @@ def assert_exercise_not_found_response(actual: InternalErrorResponseSchema):
     """
     expected = InternalErrorResponseSchema(details="Exercise not found")
     assert_internal_error_response(actual, expected)
+
 
 def assert_get_exercises_response(
     get_exercise_response: GetExercisesResponseSchema,
