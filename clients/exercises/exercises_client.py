@@ -10,6 +10,7 @@ from clients.exercises.exercises_schema import (
     UpdateExercisesResponseSchema,
     UpdateExercisesRequestSchema
 )
+import allure
 
 
 class ExercisesClient(APIClient):
@@ -17,6 +18,7 @@ class ExercisesClient(APIClient):
     Клиент для взаимодействия с API упражнений (/api/v1/exercises).
     """
 
+    @allure.step("Get exercises by course_id {query}")
     def get_exercises_api(self, query: GetExercisesQuerySchema) -> Response:
         """
         Метод получения списка упражнений.
@@ -36,6 +38,7 @@ class ExercisesClient(APIClient):
         response = self.get_exercises_api(query)
         return GetExercisesResponseSchema.model_validate_json(response.text)
 
+    @allure.step("Get exercise by exercise_id {exercise_id}")
     def get_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод получения упражнения по идентификатору.
@@ -55,6 +58,7 @@ class ExercisesClient(APIClient):
         response = self.get_exercise_api(exercise_id)
         return ExerciseResponseSchema.model_validate_json(response.text)
 
+    @allure.step("Create exercise")
     def create_exercise_api(self, request: CreateExercisesRequestSchema) -> Response:
         """
         Метод создания нового упражнения.
@@ -75,6 +79,7 @@ class ExercisesClient(APIClient):
         response = self.create_exercise_api(request)
         return CreateExercisesResponseSchema.model_validate_json(response.text)
 
+    @allure.step("Update exercise by exercise_id {exercise_id}")
     def update_exercise_api(self, exercise_id: str, request: UpdateExercisesRequestSchema) -> Response:
         """
         Метод обновления существующего упражнения.
@@ -96,6 +101,7 @@ class ExercisesClient(APIClient):
         response = self.update_exercise_api(exercise_id, request)
         return UpdateExercisesResponseSchema.model_validate_json(response.text)
 
+    @allure.step("Delete exercise by exercise_id {exercise_id}")
     def delete_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод удаления упражнения.
