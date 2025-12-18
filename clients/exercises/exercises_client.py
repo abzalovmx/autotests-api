@@ -54,7 +54,7 @@ class ExercisesClient(APIClient):
         Метод возвращает данные упражнения в виде словаря.
 
         :param exercise_id: Идентификатор упражнения.
-        :return: Словарь формата ExerciseResponseDict.
+        :return: Словарь формата ExerciseResponseDict
         """
         response = self.get_exercise_api(exercise_id)
         return ExerciseResponseSchema.model_validate_json(response.text)
