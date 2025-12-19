@@ -1,0 +1,32 @@
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:22 Make GET request to http://localhost:8000/api/v1/courses?userId=b24e4143-2893-424d-a0b6-171183a60806
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/courses?userId=b24e4143-2893-424d-a0b6-171183a60806
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     COURSES_ASSERTIONS:courses.py:90 Check get courses
+INFO     BASE_ASSERTIONS:base.py:64 Check that length of 'courses' equals to '[CreateCourseResponseSchema(course=CourseSchema(id='13b27723-536f-4e08-9e01-0745fc3532c5', title='Reduce several key town line prepare.', max_score=53, min_score=18, description='Side collection understand remember free national. Rise age people financial send former president experience. Peace usually feeling only.', preview_file=FileSchema(id='236a3a5c-21ae-498e-83fb-f538ebbb511d', filename='0ff53c18-a762-4bea-94cc-79fcc8781ba0.png', directory='tests', url=HttpUrl('http://localhost:8000/static/tests/0ff53c18-a762-4bea-94cc-79fcc8781ba0.png')), estimated_time='4 weeks', created_by_user=UserSchema(id='b24e4143-2893-424d-a0b6-171183a60806', email='robertssusan@example.org', last_name='Martinez', first_name='Dustin', middle_name='Timothy')))]'
+INFO     COURSES_ASSERTIONS:courses.py:65 Check course
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to '13b27723-536f-4e08-9e01-0745fc3532c5'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'title' equals to 'Reduce several key town line prepare.'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'max_score' equals to '53'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'min_score' equals to '18'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'description' equals to 'Side collection understand remember free national. Rise age people financial send former president experience. Peace usually feeling only.'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'estimated_time' equals to '4 weeks'
+INFO     FILES_ASSERTIONS:files.py:41 Check file
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to '236a3a5c-21ae-498e-83fb-f538ebbb511d'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'url' equals to 'http://localhost:8000/static/tests/0ff53c18-a762-4bea-94cc-79fcc8781ba0.png'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'filename' equals to '0ff53c18-a762-4bea-94cc-79fcc8781ba0.png'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'directory' equals to 'tests'
+INFO     USERS_ASSERTIONS:users.py:34 Check create user
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to 'b24e4143-2893-424d-a0b6-171183a60806'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'email' equals to 'robertssusan@example.org'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'last_name' equals to 'Martinez'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'first_name' equals to 'Dustin'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'middle_name' equals to 'Timothy'
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validation JSON schema

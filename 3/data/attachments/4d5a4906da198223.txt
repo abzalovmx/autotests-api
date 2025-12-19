@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEyLTE5VDE0OjA3OjUwLjY1OTM2MiIsInVzZXJfaWQiOiJlOGU0MWM2Ny0zMmE4LTQzOWQtYjY2Yi0xZDIzNzlhYmViYzIifQ.jo0N386Z_Ngg0Y_OEFmEuYl114z5ppyO4meWmSBjLQo' \
+ -H 'content-length: 373' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Same tell experience.","maxScore":87,"minScore":16,"description":"Add job must step me executive commercial. Common wish effect responsibility time live pay.\nBeautiful change you car no pick. Member leg minute charge work.","estimatedTime":"7 weeks","previewFileId":"ed004ee6-5331-49aa-b381-5e8e24299c21","createdByUserId":"e8e41c67-32a8-439d-b66b-1d2379abebc2"}'

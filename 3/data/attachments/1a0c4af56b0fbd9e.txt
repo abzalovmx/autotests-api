@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEyLTE5VDE0OjA3OjUxLjUzNDkwMyIsInVzZXJfaWQiOiI2NjE1ZjkxMC0yYmY5LTQwZWItODA1MC0zYWRjN2Q4NzA4ZDYifQ.Wkc8tsapQ3rT3bTmDbw45g4M2COcCTWc5eNrUp94ztU' \
+ -H 'content-length: 370' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Teach college travel tell month mouth too.","maxScore":88,"minScore":16,"description":"Build wear table item official. Star shoulder night recognize here.\nAccept detail condition common hour to news. Sea those cut keep.","estimatedTime":"3 weeks","previewFileId":"4c7d4a51-ae33-4952-a5ac-ebf3b0e9acb6","createdByUserId":"6615f910-2bf9-40eb-8050-3adc7d8708d6"}'
