@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEyLTIyVDA0OjU3OjM5LjI4ODYyMCIsInVzZXJfaWQiOiIyODZjMzg5Ny00ZTRmLTRjY2YtYjM5Yi1iZTFmYzdiM2ZmYWMifQ.SI3XjoYD_F4dFeaiQdnmDphZXsATbf3qnvhPpx9nPs8' \
+ -H 'content-length: 336' \
+ -H 'content-type: application/json' \
+ -d '{"title":"American north current she kitchen than.","maxScore":66,"minScore":23,"description":"Week character decision free. Beautiful perhaps true white tend also you. Role investment many peace.","estimatedTime":"9 weeks","previewFileId":"bcb8f720-8f01-4c1b-9a53-ac967b2f193d","createdByUserId":"286c3897-4e4f-4ccf-b39b-be1fc7b3ffac"}'

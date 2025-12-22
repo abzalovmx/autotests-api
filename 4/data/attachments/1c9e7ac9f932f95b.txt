@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEyLTIyVDA0OjU3OjM5LjAwNzEyMCIsInVzZXJfaWQiOiJhMmQ0MjZmMC00NTU0LTQzZTUtOTJmNS0yZjE3YmU3NTEyZGYifQ.3tv2xf-W0bLKVQaGSsr5yw9jRFwFn7_iTb5VbQvktFo' \
+ -H 'content-length: 430' \
+ -H 'content-type: application/json' \
+ -d '{"title":"And budget term do physical assume.","maxScore":95,"minScore":21,"description":"Hotel small become arrive. Life month end gun author. Stand perhaps anyone southern better spend eight.\nThus bed community tax heavy resource bank. Care number concern them rock trouble design area.","estimatedTime":"10 weeks","previewFileId":"36aa45cb-4007-4591-8fa2-5d3ae80962f1","createdByUserId":"a2d426f0-4554-43e5-92f5-2f17be7512df"}'

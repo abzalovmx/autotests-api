@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/exercises' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEyLTIyVDA0OjU3OjM5LjI4ODYyMCIsInVzZXJfaWQiOiIyODZjMzg5Ny00ZTRmLTRjY2YtYjM5Yi1iZTFmYzdiM2ZmYWMifQ.SI3XjoYD_F4dFeaiQdnmDphZXsATbf3qnvhPpx9nPs8' \
+ -H 'content-length: 368' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Front opportunity charge yes eye black dinner interest.","courseId":"fabaae0d-5c93-43ed-8262-3bc22c0bfa91","maxScore":92,"minScore":30,"orderIndex":92,"description":"Rich particular necessary lose beyond her. Response data send long.\nYourself top much. Capital forget big cell time space factor. Star able hair month strong give.","estimatedTime":"5 weeks"}'

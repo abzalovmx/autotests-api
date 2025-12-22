@@ -1,0 +1,32 @@
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:22 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:22 Make GET request to http://localhost:8000/api/v1/courses?userId=b15909aa-6f7a-4b2a-929d-31b352ad3aca
+INFO     HTTP_LOGGER:event_hooks.py:26 Got response 200  OK from http://localhost:8000/api/v1/courses?userId=b15909aa-6f7a-4b2a-929d-31b352ad3aca
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     COURSES_ASSERTIONS:courses.py:90 Check get courses
+INFO     BASE_ASSERTIONS:base.py:64 Check that length of 'courses' equals to '[CreateCourseResponseSchema(course=CourseSchema(id='38804336-cc32-4d53-95d9-ccffd6669f99', title='Which want open high off.', max_score=89, min_score=21, description='Join fine or enter right. World knowledge understand cost produce window. Against who hour reach right.', preview_file=FileSchema(id='057f0b72-dc81-4446-9aa5-f296d6925bb7', filename='4831ec62-aa43-41f6-8fc9-019e3e9431e5.png', directory='tests', url=HttpUrl('http://localhost:8000/static/tests/4831ec62-aa43-41f6-8fc9-019e3e9431e5.png')), estimated_time='8 weeks', created_by_user=UserSchema(id='b15909aa-6f7a-4b2a-929d-31b352ad3aca', email='leonlinda@example.com', last_name='Johnson', first_name='Cassandra', middle_name='Daniel')))]'
+INFO     COURSES_ASSERTIONS:courses.py:65 Check course
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to '38804336-cc32-4d53-95d9-ccffd6669f99'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'title' equals to 'Which want open high off.'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'max_score' equals to '89'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'min_score' equals to '21'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'description' equals to 'Join fine or enter right. World knowledge understand cost produce window. Against who hour reach right.'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'estimated_time' equals to '8 weeks'
+INFO     FILES_ASSERTIONS:files.py:41 Check file
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to '057f0b72-dc81-4446-9aa5-f296d6925bb7'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'url' equals to 'http://localhost:8000/static/tests/4831ec62-aa43-41f6-8fc9-019e3e9431e5.png'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'filename' equals to '4831ec62-aa43-41f6-8fc9-019e3e9431e5.png'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'directory' equals to 'tests'
+INFO     USERS_ASSERTIONS:users.py:34 Check create user
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'id' equals to 'b15909aa-6f7a-4b2a-929d-31b352ad3aca'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'email' equals to 'leonlinda@example.com'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'last_name' equals to 'Johnson'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'first_name' equals to 'Cassandra'
+INFO     BASE_ASSERTIONS:base.py:37 Check that 'middle_name' equals to 'Daniel'
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validation JSON schema
