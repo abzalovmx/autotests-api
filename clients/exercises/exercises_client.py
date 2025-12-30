@@ -12,6 +12,7 @@ from clients.exercises.exercises_schema import (
 )
 import allure
 from tools.routes import APIRoutes
+from clients.api_coverage import tracker
 
 
 class ExercisesClient(APIClient):
@@ -20,6 +21,7 @@ class ExercisesClient(APIClient):
     """
 
     @allure.step("Get exercises by course_id {query}")
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES)
     def get_exercises_api(self, query: GetExercisesQuerySchema) -> Response:
         """
         Метод получения списка упражнений.
@@ -29,6 +31,7 @@ class ExercisesClient(APIClient):
         """
         return self.get(APIRoutes.EXERCISES, params=query.model_dump(by_alias=True))
 
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES)
     def get_exercises(self, query: GetExercisesQuerySchema) -> GetExercisesResponseSchema:
         """
         Метод возвращает список упражнений в виде словаря.
@@ -40,6 +43,7 @@ class ExercisesClient(APIClient):
         return GetExercisesResponseSchema.model_validate_json(response.text)
 
     @allure.step("Get exercise by exercise_id {exercise_id}")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES}/{{exercise_id}}")
     def get_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод получения упражнения по идентификатору.
@@ -49,6 +53,7 @@ class ExercisesClient(APIClient):
         """
         return self.get(f"{APIRoutes.EXERCISES}/{exercise_id}")
 
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES}/{{exercise_id}}")
     def get_exercise(self, exercise_id: str) -> ExerciseResponseSchema:
         """
         Метод возвращает данные упражнения в виде словаря.
@@ -60,6 +65,7 @@ class ExercisesClient(APIClient):
         return ExerciseResponseSchema.model_validate_json(response.text)
 
     @allure.step("Create exercise")
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES)
     def create_exercise_api(self, request: CreateExercisesRequestSchema) -> Response:
         """
         Метод создания нового упражнения.
@@ -70,6 +76,7 @@ class ExercisesClient(APIClient):
         """
         return self.post(APIRoutes.EXERCISES, json=request.model_dump(by_alias=True))
 
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES)
     def create_exercise(self, request: CreateExercisesRequestSchema) -> CreateExercisesResponseSchema:
         """
         Метод создаёт упражнение и возвращает результат в виде словаря.
@@ -81,6 +88,7 @@ class ExercisesClient(APIClient):
         return CreateExercisesResponseSchema.model_validate_json(response.text)
 
     @allure.step("Update exercise by exercise_id {exercise_id}")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES}/{{exercise_id}}")
     def update_exercise_api(self, exercise_id: str, request: UpdateExercisesRequestSchema) -> Response:
         """
         Метод обновления существующего упражнения.
@@ -91,6 +99,7 @@ class ExercisesClient(APIClient):
         """
         return self.patch(f"{APIRoutes.EXERCISES}/{exercise_id}", json=request.model_dump(by_alias=True))
 
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES}/{{exercise_id}}")
     def update_exercise(self, exercise_id: str, request: UpdateExercisesRequestSchema) -> UpdateExercisesResponseSchema:
         """
         Метод обновления упражнения с возвратом результата в виде словаря.
@@ -103,6 +112,7 @@ class ExercisesClient(APIClient):
         return UpdateExercisesResponseSchema.model_validate_json(response.text)
 
     @allure.step("Delete exercise by exercise_id {exercise_id}")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES}/{{exercise_id}}")
     def delete_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод удаления упражнения.
@@ -115,7 +125,7 @@ class ExercisesClient(APIClient):
 
 def get_exercises_client(user: AuthenticationUserSchema) -> ExercisesClient:
     """
-    Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
+    Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом
 
     :param user: Словарь с данными аутентификации пользователя.
     :return: Готовый к использованию экземпляр ExercisesClient.
