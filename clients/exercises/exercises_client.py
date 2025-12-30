@@ -125,7 +125,7 @@ class ExercisesClient(APIClient):
 
 def get_exercises_client(user: AuthenticationUserSchema) -> ExercisesClient:
     """
-    Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом
+    Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
 
     :param user: Словарь с данными аутентификации пользователя.
     :return: Готовый к использованию экземпляр ExercisesClient.
